@@ -7,13 +7,28 @@ definition:
   schema:
     version: v0.1
     schema:
-      scalar_types: {}
+      scalar_types:
+        String:
+          aggregate_functions: {}
+          comparison_operators: {}
       object_types: {}
       collections: []
-      functions: []
+      functions:
+        - name: hello
+          arguments:
+            name:
+              type:
+                type: nullable
+                underlying_type:
+                  type: named
+                  name: String
+          result_type:
+            type: named
+            name: String
       procedures: []
     capabilities:
-      version: ""
+      version: 0.1.0
       capabilities:
-        query: {}
+        query:
+          variables: {}
         mutation: {}
